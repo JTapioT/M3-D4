@@ -49,6 +49,13 @@ window.onload = () => {
         colDivElement.classList.add("col-4");
 
         let cardElement = event.target.closest(".card");
+        
+        let deleteBtn = document.createElement("a");
+        deleteBtn.className = "btn btn-success"
+        deleteBtn.innerText = "Remove from cart";
+
+        cardElement.appendChild(deleteBtn);
+
         colDivElement.appendChild(cardElement);
 
         cartContainer.appendChild(colDivElement);
